@@ -68,7 +68,7 @@ const Recipes = ({ addedIngredients }) => {
 
             return (
               <div key={recipe.uri} className="recipe-link">
-                <Link to={`recipes/${code}`}>
+                <Link style={{ textDecoration: "none" }} to={`recipes/${code}`}>
                   <div className="recipe-card">
                     <h2 className="recipe-title">{recipe.label}</h2>
                     <img
