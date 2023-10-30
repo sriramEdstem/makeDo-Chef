@@ -76,7 +76,7 @@ body {
 .checklist {
   position: absolute;
   width: 20rem;
-  top: 500px;
+  top: 400px;
   background: #82c430;
   border-radius: 4px;
   padding: 16px;
@@ -160,6 +160,7 @@ body {
 }
 
 .side {
+  position: relative;
   width: 300px;
 }
 .recipelists {
@@ -169,13 +170,32 @@ body {
   display: flex;
 }
 .recipes {
+  position: absolute;
   width: 1100px;
-  margin-left: 100px;
-  margin-top: -80px;
+  margin-left: 500px;
+  margin-top: 30px;
 }
+
+.searchR{
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  background-color: #82c430;
+  position: absolute
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  margin-right: 20px;
+}
+
 
 .recipeBtn {
   background-color: #82c430;
+  position: absolute
   color: #fff;
   border: none;
   border-radius: 5px;

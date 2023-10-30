@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const Recipes = ({ addedIngredients }) => {
-  const concatenatedString = addedIngredients.join("+").replace(/ /g, "+");
-  const [conString, setConString] = useState(null);
-
+const Recipes = () => {
+  const params = useParams();
+  const recipeID = params.recipeID;
   const [page, setPage] = useState(0);
 
-  const baseURL = `https://api.edamam.com/search?q=${conString}&app_id=0c050651&app_key=de5cacc303846b5479ddc98546b27e05&from=${page}&to=${
+  const baseURL = `https://api.edamam.com/search?q=${recipeID}&app_id=0c050651&app_key=de5cacc303846b5479ddc98546b27e05&from=${page}&to=${
     page + 12
   }`;
 
   const [recipeList, setRecipeList] = useState(null);
-
-  const search = () => {
-    setConString(concatenatedString);
-  };
 
   const nextpage = () => {
     setPage(page + 12);
@@ -31,7 +26,7 @@ const Recipes = ({ addedIngredients }) => {
   };
 
   useEffect(() => {
-    if (conString) {
+    if (recipeID) {
       axios
         .get(baseURL)
         .then((response) => {
@@ -55,9 +50,6 @@ const Recipes = ({ addedIngredients }) => {
   }
   return (
     <div className="recipes">
-      <button onClick={search} className="recipeBtn">
-        Search
-      </button>
       {recipeList && (
         <div className="recipe-card-grid">
           {recipeList.hits.map((hit) => {
@@ -68,7 +60,10 @@ const Recipes = ({ addedIngredients }) => {
 
             return (
               <div key={recipe.uri} className="recipe-link">
-                <Link style={{ textDecoration: "none" }} to={`recipes/${code}`}>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to={`/recipes/${code}`}
+                >
                   <div className="recipe-card">
                     <h2 className="recipe-title">{recipe.label}</h2>
                     <img
