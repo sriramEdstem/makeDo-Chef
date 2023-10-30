@@ -34,3 +34,21 @@
   font-size: 16px;
   margin: 10px 0;
 }
+.label1 {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 8px;
+  background-color: #ff1810;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.label2 {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 8px;
+  background-color: #edff25;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
