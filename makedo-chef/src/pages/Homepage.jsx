@@ -1,9 +1,9 @@
-import AutoComplete from "../Components/AutoComplete ";
+import AutoComplete from "../components/AutoComplete ";
 import { autoCompleteData } from "../data.js";
 import { useState } from "react";
-import CheckList from "../Components/CheckList";
-import Recipes from "../Components/Recipes";
-import Header from "../Components/Header";
+import CheckList from "../components/CheckList";
+import Recipes from "../components/Recipes";
+import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {

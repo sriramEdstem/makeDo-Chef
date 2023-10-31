@@ -1,7 +1,7 @@
-import Header from "./Components/Header";
-import RecipeDetails from "./Components/RecipeDetails";
-import Recipes from "./Components/Recipes";
-import Homepage from "./Pages/Homepage";
+import Header from "./components/Header";
+import RecipeDetails from "./components/RecipeDetails";
+import Recipes from "./components/Recipes";
+import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
